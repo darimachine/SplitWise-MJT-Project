@@ -1,0 +1,42 @@
+{
+  "serho": {
+    "username": "serho",
+    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
+    "firstName": "Serho",
+    "lastName": "Ch",
+    "friends": [
+      "serhi"
+    ],
+    "groups": [
+      "Room"
+    ],
+    "preferredCurrency": "BGN"
+  },
+  "serhi": {
+    "username": "serhi",
+    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
+    "firstName": "Serhi",
+    "lastName": "Ch",
+    "friends": [
+      "serho",
+      "serhq"
+    ],
+    "groups": [
+      "Room"
+    ],
+    "preferredCurrency": "BGN"
+  },
+  "serhq": {
+    "username": "serhq",
+    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
+    "firstName": "Serhq",
+    "lastName": "Ch",
+    "friends": [
+      "serhi"
+    ],
+    "groups": [
+      "Room"
+    ],
+    "preferredCurrency": "EUR"
+  }
+}

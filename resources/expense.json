@@ -1,0 +1,43 @@
+{
+  "serhi": [
+    {
+      "payerUsername": "serhi",
+      "description": "Obshti smetki",
+      "amount": 200.0,
+      "participants": [
+        "serho"
+      ],
+      "dateTime": "2025-02-11 02:28:43"
+    },
+    {
+      "payerUsername": "serhi",
+      "description": "Plashtane na Obshtak",
+      "amount": 300.0,
+      "participants": [
+        "serho",
+        "serhq"
+      ],
+      "dateTime": "2025-02-11 02:29:55"
+    }
+  ],
+  "serhq": [
+    {
+      "payerUsername": "serhq",
+      "description": "Nqkakuv zaem",
+      "amount": 100.0,
+      "participants": [
+        "serhi"
+      ],
+      "dateTime": "2025-02-11 02:31:45"
+    },
+    {
+      "payerUsername": "serhq",
+      "description": "restorant",
+      "amount": 50.0,
+      "participants": [
+        "serhi"
+      ],
+      "dateTime": "2025-02-11 02:32:37"
+    }
+  ]
+}
