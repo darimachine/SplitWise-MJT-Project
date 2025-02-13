@@ -36,9 +36,7 @@ public class AuthenticationManagerTest {
         boolean result = authManager.login(channelMock, "alex", "hashedPass123");
         assertTrue(result, "Login should succeed if the hashed passwords match");
 
-        // isAuthenticated should be true
         assertTrue(authManager.isAuthenticated(channelMock), "Should be authenticated after success");
-        // getAuthenticatedUser should be 'alex'
         assertEquals(alex, authManager.getAuthenticatedUser(channelMock), "Channel should map to user alex");
     }
 
@@ -91,10 +89,7 @@ public class AuthenticationManagerTest {
         boolean loginResult = authManager.login(channelMock, "alex", "hashedPass123");
         assertTrue(loginResult);
 
-        // now logout
         authManager.logout(channelMock);
-
-        // channel no longer authenticated
         assertFalse(authManager.isAuthenticated(channelMock));
         assertNull(authManager.getAuthenticatedUser(channelMock));
     }

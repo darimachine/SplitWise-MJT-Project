@@ -62,11 +62,9 @@ class NotificationJsonProcessorTest {
         try (MockedStatic<Files> filesMock = mockStatic(Files.class)) {
             filesMock.when(() -> Files.exists(any(Path.class))).thenReturn(true);
 
-            // Provide a valid JSON via a Reader
             Reader validJsonReader = new StringReader(VALID_JSON);
             BufferedReader bufferedReader = new BufferedReader(validJsonReader);
 
-            // Mock newBufferedReader to return our bufferedReader
             filesMock.when(() -> Files.newBufferedReader(any(Path.class))).thenReturn(bufferedReader);
 
             Map<String, List<Notification>> loaded = processor.loadData();

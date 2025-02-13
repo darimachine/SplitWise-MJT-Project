@@ -7,6 +7,7 @@ public enum Currency {
     USD("USD"),
     EUR("EUR"),
     GBP("GBP");
+
     private final String currency;
 
     Currency(String currency) {

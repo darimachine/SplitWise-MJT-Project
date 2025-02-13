@@ -1,0 +1,208 @@
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | Password must be at least 8 characters long, contain at least one digit, one uppercase letter and one lowercase letter. register serhi 1234 Serhan Chavdarliev | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidPasswordException: Password must be at least 8 characters long, contain at least one digit, one uppercase letter and one lowercase letter.
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.authentication.RegisterCommandValidator.validate(RegisterCommandValidator.java:35)
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.authentication.RegisterCommand.execute(RegisterCommand.java:27)
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:13:36 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | Invalid register command! Usage: register <username> <password> <first_name> <last_name>  register | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid register command! Usage: register <username> <password> <first_name> <last_name> 
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateArguments(AbstractCommandValidator.java:35)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.authentication.RegisterCommandValidator.validate(RegisterCommandValidator.java:26)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.authentication.RegisterCommand.execute(RegisterCommand.java:27)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:14:23 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | You don't have access to this command!
+You are not authenticated.
+You must be logged in to perform this action.
+ my-expenses | bg.sofia.uni.fmi.mjt.splitwise.exceptions.users.UserNotAuthenticatedException: You don't have access to this command!
+You are not authenticated.
+You must be logged in to perform this action.
+
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateAuthentication(AbstractCommandValidator.java:23)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.expenses.ShowExpensesCommandValidator.validate(ShowExpensesCommandValidator.java:23)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.expenses.ShowExpensesCommand.execute(ShowExpensesCommand.java:25)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:15:42 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: ivan | User with that username: ekqe does not exist. are-friends ekqe serhi | bg.sofia.uni.fmi.mjt.splitwise.exceptions.users.UserNotFoundException: User with that username: ekqe does not exist.
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.servicevalidators.FriendshipValidator.validateUserExists(FriendshipValidator.java:23)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.AreFriendsCommandValidator.validate(AreFriendsCommandValidator.java:30)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.friend.AreFriendsCommand.execute(AreFriendsCommand.java:24)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:16:30 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: ivan | You are not inside any group! my-groups | bg.sofia.uni.fmi.mjt.splitwise.exceptions.users.UserNotInAnyGroupException: You are not inside any group!
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.servicevalidators.UserValidator.validateIfUserIsInsideAGroup(UserValidator.java:38)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.group.ShowGroupObligationsCommandValidator.validate(ShowGroupObligationsCommandValidator.java:30)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.group.ShowGroupObligationsCommand.execute(ShowGroupObligationsCommand.java:31)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:18:09 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: ivan | Invalid command! Cannot recognize command all-notifcations all-notifcations | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid command! Cannot recognize command all-notifcations
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandFactory.createCommand(CommandFactory.java:122)
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:35)
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:32:49 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: ivan | Invalid command! Cannot recognize command all-notications all-notications | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid command! Cannot recognize command all-notications
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandFactory.createCommand(CommandFactory.java:122)
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:35)
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:33:14 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: serhi | Invalid are-friends command! Usage: are-friends <user1> <user2> are-friends user1 | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid are-friends command! Usage: are-friends <user1> <user2>
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateArguments(AbstractCommandValidator.java:35)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.AreFriendsCommandValidator.validate(AreFriendsCommandValidator.java:25)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.friend.AreFriendsCommand.execute(AreFriendsCommand.java:24)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:34:17 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: serhi | Invalid are-friends command! Usage: are-friends <user1> <user2> are-friends u1 u2 u3 | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid are-friends command! Usage: are-friends <user1> <user2>
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateArguments(AbstractCommandValidator.java:35)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.AreFriendsCommandValidator.validate(AreFriendsCommandValidator.java:25)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.friend.AreFriendsCommand.execute(AreFriendsCommand.java:24)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:34:28 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | You don't have access to this command!
+You are not authenticated.
+You must be logged in to perform this action.
+ my-friends | bg.sofia.uni.fmi.mjt.splitwise.exceptions.users.UserNotAuthenticatedException: You don't have access to this command!
+You are not authenticated.
+You must be logged in to perform this action.
+
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateAuthentication(AbstractCommandValidator.java:23)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.ShowFriendsCommandValidator.validate(ShowFriendsCommandValidator.java:27)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.friend.ShowFriendsCommand.execute(ShowFriendsCommand.java:26)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:34:41 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | Invalid register command! Usage: register <username> <password> <first_name> <last_name>  register | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: Invalid register command! Usage: register <username> <password> <first_name> <last_name> 
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.AbstractCommandValidator.validateArguments(AbstractCommandValidator.java:35)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.authentication.RegisterCommandValidator.validate(RegisterCommandValidator.java:26)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.authentication.RegisterCommand.execute(RegisterCommand.java:27)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:35:10 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: Unknown | Invalid password, try again! login serhi     12345678SS | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidPasswordException: Invalid password, try again!
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.authentication.LoginCommand.authenticateUser(LoginCommand.java:40)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.authentication.LoginCommand.execute(LoginCommand.java:33)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:35:57 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: User: ivan | You cannot add yourself as a friend! add-friend ivan | bg.sofia.uni.fmi.mjt.splitwise.exceptions.InvalidCommandException: You cannot add yourself as a friend!
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.AddFriendCommandValidator.validateNotAddingSelf(AddFriendCommandValidator.java:39)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.validation.commandvalidators.friend.AddFriendCommandValidator.validate(AddFriendCommandValidator.java:32)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.friend.AddFriendCommand.execute(AddFriendCommand.java:28)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.command.factory.CommandProcessor.processClientInput(CommandProcessor.java:36)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.handleClientRequests(SplitwiseServer.java:109)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServer.start(SplitwiseServer.java:87)
+Feb 13, 2025 1:37:48 PM bg.sofia.uni.fmi.mjt.splitwise.util.LoggerUtil logError
+SEVERE: 	at bg.sofia.uni.fmi.mjt.splitwise.server.SplitwiseServerMain.main(SplitwiseServerMain.java:10)

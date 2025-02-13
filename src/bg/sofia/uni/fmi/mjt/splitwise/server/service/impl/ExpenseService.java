@@ -35,7 +35,6 @@ public class ExpenseService implements ExpenseServiceAPI {
         Expense expense = new Expense(payer, reason, amount, new HashSet<>(participants), LocalDateTime.now());
         expenses.putIfAbsent(payer, new ArrayList<>());
         expenses.get(payer).add(expense);
-        // Update obligations
         for (String participant : participants) {
             obligationService.addObligation(participant, payer, splitAmount);
         }

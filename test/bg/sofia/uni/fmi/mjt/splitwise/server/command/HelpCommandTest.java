@@ -18,7 +18,7 @@ class HelpCommandTest {
     @BeforeEach
     void setUp() {
         command = new HelpCommand();
-        clientChannelMock = null; // HelpCommand does not use clientChannel
+        clientChannelMock = null;
     }
 
     @Test

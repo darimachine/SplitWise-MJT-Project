@@ -12,15 +12,13 @@ public class LoggerUtil {
 
     static {
         try {
-            // Create a FileHandler to log messages to a file
             FileHandler fileHandler = new FileHandler("errors/server-errors.log", true);
-            fileHandler.setFormatter(new SimpleFormatter()); // Set log format
+            fileHandler.setFormatter(new SimpleFormatter());
 
-            // Add handlers to logger (console + file)
             LOGGER.addHandler(fileHandler);
             LOGGER.addHandler(new ConsoleHandler());
 
-            LOGGER.setLevel(Level.SEVERE); // Log only severe errors
+            LOGGER.setLevel(Level.SEVERE);
         } catch (IOException e) {
             System.err.println("Failed to initialize logger: " + e.getMessage());
         }
@@ -30,7 +28,6 @@ public class LoggerUtil {
         String userInfo = (user != null) ? "User: " + user + " | " : "";
         LOGGER.severe(userInfo + message + " | " + e.toString());
 
-        // Print stack trace to log file
         for (StackTraceElement element : e.getStackTrace()) {
             LOGGER.severe("\tat " + element);
         }

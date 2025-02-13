@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserJsonProcessor extends AbstractJsonProcessor<Map<String, User>> {
-    private static final String USERS_FILE_PATH = "resources/users.json"; // Path to the JSON file
+    private static final String USERS_FILE_PATH = "resources/users.json";
     private static final Type USER_MAP_TYPE = new TypeToken<Map<String, User>>() {
     }.getType();
 

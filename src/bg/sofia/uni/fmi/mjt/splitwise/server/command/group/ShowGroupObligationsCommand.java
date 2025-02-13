@@ -35,6 +35,6 @@ public class ShowGroupObligationsCommand implements Command {
 
         return obligationService.getMyGroupObligations(username, loggedUserGroups.stream()
             .collect(Collectors.toMap(group -> group,
-                groupService::getGroupMembers))); // GroupName: [member1, member2, member3]
+                groupService::getGroupMembers)));
     }
 }

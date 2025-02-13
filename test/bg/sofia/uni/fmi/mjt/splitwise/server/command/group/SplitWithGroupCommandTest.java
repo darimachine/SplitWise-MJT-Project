@@ -56,7 +56,6 @@ class SplitWithGroupCommandTest {
 
     @Test
     void testExecute_ValidArguments_SplitsCorrectly() {
-        // Mock group members excluding logged user
         when(groupServiceMock.getGroupMembers(GROUP_NAME)).thenReturn(Set.of(LOGGED_USERNAME, FRIEND_1, FRIEND_2));
 
         String[] validArgs = {"split-group", String.valueOf(AMOUNT), GROUP_NAME, DESCRIPTION};

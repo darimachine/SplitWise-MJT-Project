@@ -1,98 +1,58 @@
 {
-  "serho": [
-    {
-      "message": "serhi added you as a friend!",
-      "timestamp": "2025-02-11 01:45:44",
-      "seen": true
-    },
-    {
-      "message": "serhi added you as a friend!",
-      "timestamp": "2025-02-11 01:46:30",
-      "seen": true
-    },
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 01:49:17",
-      "seen": true
-    },
-    {
-      "message": "User serhi removed you from group: Room",
-      "timestamp": "2025-02-11 01:51:36",
-      "seen": true
-    },
-    {
-      "message": "User serhi added you to group: Room",
-      "timestamp": "2025-02-11 01:54:21",
-      "seen": true
-    },
-    {
-      "message": "User serhi removed you from group: Room",
-      "timestamp": "2025-02-11 01:54:35",
-      "seen": true
-    },
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 02:03:44",
-      "seen": true
-    },
-    {
-      "message": "User serhi removed you from group: Room",
-      "timestamp": "2025-02-11 02:06:57",
-      "seen": true
-    },
-    {
-      "message": "Serhi Ch paid a total of 200.00 BGN for you (100.00 each). Reason: Obshti smetki.",
-      "timestamp": "2025-02-11 02:28:43",
-      "seen": false
-    },
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 02:29:21",
-      "seen": false
-    },
-    {
-      "message": "Serhi Ch (serhi) paid 300.0 (100.0 each) for group Room Reason: Plashtane na Obshtak.",
-      "timestamp": "2025-02-11 02:29:55",
-      "seen": false
-    }
-  ],
-  "serhq": [
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 01:49:17",
-      "seen": true
-    },
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 02:03:44",
-      "seen": true
-    },
-    {
-      "message": "Serhi Ch added you to group Room",
-      "timestamp": "2025-02-11 02:29:21",
-      "seen": false
-    },
-    {
-      "message": "Serhi Ch (serhi) paid 300.0 (100.0 each) for group Room Reason: Plashtane na Obshtak.",
-      "timestamp": "2025-02-11 02:29:55",
-      "seen": false
-    }
-  ],
   "serhi": [
     {
-      "message": "serhq added you as a friend!",
-      "timestamp": "2025-02-11 02:30:41",
-      "seen": false
+      "message": "ivan added you as a friend!",
+      "timestamp": "2025-02-13 13:16:03",
+      "seen": true
     },
     {
-      "message": "Serhq Ch paid a total of 100.00 EUR for you (50.00 each). Reason: Nqkakuv zaem.",
-      "timestamp": "2025-02-11 02:31:45",
-      "seen": false
+      "message": "ivan added you as a friend!",
+      "timestamp": "2025-02-13 13:17:40",
+      "seen": true
     },
     {
-      "message": "Serhq Ch paid a total of 50.00 EUR for you (25.00 each). Reason: restorant.",
-      "timestamp": "2025-02-11 02:32:37",
+      "message": "Ivan Ivanov paid a total of 200.00 BGN for you (100.00 each). Reason: Vzeh Hladilnik.",
+      "timestamp": "2025-02-13 13:19:26",
+      "seen": true
+    },
+    {
+      "message": "Ivan Ivanov added you to group RoomMate",
+      "timestamp": "2025-02-13 13:24:16",
+      "seen": true
+    },
+    {
+      "message": "Ivan Ivanov (ivan) paid 300.0 (100.0 each) for group RoomMate Reason: Restorant.",
+      "timestamp": "2025-02-13 13:27:34",
+      "seen": true
+    },
+    {
+      "message": "ivan (Ivan Ivanov) approved your payment of 50.0.",
+      "timestamp": "2025-02-13 13:31:37",
+      "seen": true
+    }
+  ],
+  "georgi": [
+    {
+      "message": "Ivan Ivanov added you to group RoomMate",
+      "timestamp": "2025-02-13 13:24:16",
+      "seen": true
+    },
+    {
+      "message": "ivan added you as a friend!",
+      "timestamp": "2025-02-13 13:25:41",
+      "seen": true
+    },
+    {
+      "message": "Ivan Ivanov (ivan) paid 300.0 (100.0 each) for group RoomMate Reason: Restorant.",
+      "timestamp": "2025-02-13 13:27:34",
       "seen": false
+    }
+  ],
+  "ivan": [
+    {
+      "message": "Serhan Chavdarliev paid a total of 50.00 EUR for you (25.00 each). Reason: Proba Euro.",
+      "timestamp": "2025-02-13 13:22:08",
+      "seen": true
     }
   ]
 }

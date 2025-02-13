@@ -68,7 +68,7 @@ public class ObligationService implements ObligationServiceAPI {
         if (result == null) {
             return Collections.emptyMap();
         }
-        return new HashMap<>(result); // copy
+        return new HashMap<>(result);
     }
 
     @Override
@@ -84,7 +84,6 @@ public class ObligationService implements ObligationServiceAPI {
             }
         }
 
-        // no existing reverse or reverse=0 => accumulate
         addForwardDebt(forwardMap, toUser, amount);
     }
 
@@ -92,7 +91,6 @@ public class ObligationService implements ObligationServiceAPI {
                                    Map<String, Double> forwardMap) {
         Map<String, Double> reverseMap = obligations.get(toUser);
 
-        //Check if converted works
         double converted =
             currencyConverter.convertToBGN(userService.getUser(toUser).getPreferredCurrency().getCurrency(),
                 amount);
@@ -192,7 +190,6 @@ public class ObligationService implements ObligationServiceAPI {
                 }
             }
 
-            //Format output using a separate ObligationFormatter
             sb.append("==== Group: ").append(groupName).append(" ===\n")
                 .append(obligationFormatter.formatObligations(groupWhoOweMe, groupWhoIOwe, loggedUsername));
         }

@@ -160,8 +160,6 @@ public class NotificationServiceTest {
 
         notificationService.addNotification("Hello all", recipients);
 
-        // "alice" => [ Notification("Hello all") ]
-        // "bob" => [ Notification("Hello all") ]
         assertTrue(fakeNotifications.containsKey("alice"));
         assertTrue(fakeNotifications.containsKey("bob"));
 
@@ -170,7 +168,6 @@ public class NotificationServiceTest {
         assertEquals("Hello all", fakeNotifications.get("alice").get(0).getMessage());
 
         verify(processorMock, times(2)).saveData(fakeNotifications);
-        // Because for each recipient, it calls addNotification => each time calls saveData
     }
 
     @Test

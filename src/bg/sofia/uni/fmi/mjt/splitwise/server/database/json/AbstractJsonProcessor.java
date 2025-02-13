@@ -43,5 +43,5 @@ public abstract class AbstractJsonProcessor<T> implements ProcessorAPI<T> {
         }
     }
 
-    protected abstract T createDefaultData(); // Method to return default empty data
+    protected abstract T createDefaultData();
 }

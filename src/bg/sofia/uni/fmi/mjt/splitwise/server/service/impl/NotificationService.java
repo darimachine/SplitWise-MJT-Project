@@ -21,13 +21,11 @@ public class NotificationService implements NotificationServiceAPI {
 
     @Override
     public List<Notification> getAllNotificationsForUser(String username) {
-        //validateUser(userService, username);
         return notifications.getOrDefault(username, List.of());
     }
 
     @Override
     public List<Notification> getUnseenNotificationsForUser(String username) {
-        //validateUser(userService, username);
         List<Notification> currUserNotifications = notifications.getOrDefault(username, List.of());
         return currUserNotifications.stream()
             .filter(notification -> !notification.isSeen())
@@ -49,7 +47,6 @@ public class NotificationService implements NotificationServiceAPI {
 
     @Override
     public void markNotificationsAsSeen(String username, List<Notification> notificationsToMark) {
-        //validateUser(userService, username);
         if (notificationsToMark == null || notificationsToMark.isEmpty()) {
             return;
         }
@@ -67,7 +64,6 @@ public class NotificationService implements NotificationServiceAPI {
 
     @Override
     public void addNotification(String message, String recipientUsername) {
-        //validateUser(userService, recipientUsername);
         Notification notification = new Notification(message);
         notifications.putIfAbsent(recipientUsername, new ArrayList<>());
         notifications.get(recipientUsername).add(notification);

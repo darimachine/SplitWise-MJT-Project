@@ -29,7 +29,6 @@ public class ExpenseServiceTest {
 
     private ExpenseService expenseService;
 
-    // We'll store a fake in-memory expenses map that the service under test manipulates
     private Map<String, List<Expense>> fakeExpenses;
 
     @BeforeEach
@@ -51,7 +50,6 @@ public class ExpenseServiceTest {
 
     @Test
     void testGetUserExpenses_NonEmpty() {
-        // Suppose "bob" is in the map with 2 expenses
         List<Expense> bobList = new ArrayList<>();
         bobList.add(new Expense("bob", "Dinner", 50.0, Set.of("charlie"), LocalDateTime.now()));
         bobList.add(new Expense("bob", "Taxi", 20.0, Set.of("charlie", "alex"), LocalDateTime.now()));
@@ -64,22 +62,13 @@ public class ExpenseServiceTest {
         assertEquals("Taxi", result.get(1).description(), "Check second expense reason");
     }
 
-    // We want to see if it:
-    // 1) Creates new Expense
-    // 2) Splits the amount among participants (and payer)
-    // 3) Calls obligationService.addObligation(...) for each participant
-    // 4) Saves data via processor
 
     @Test
     void testAddFriendExpense_BasicFlow() {
-        // "alice" pays 100. There are 2 participants => "bob", "charlie"
-        // Splitted => 100 / (2 + 1) = ~33.33 each for bob, charlie
         Set<String> participants = Set.of("bob", "charlie");
 
-        // Act
         expenseService.addFriendExpense("alice", 100.0, "Trip cost", participants);
 
-        // Now fakeExpenses should have "alice" -> [1 new Expense]
         assertTrue(fakeExpenses.containsKey("alice"), "alice must be in the map");
         List<Expense> aliceExpenses = fakeExpenses.get("alice");
         assertEquals(1, aliceExpenses.size(), "Should have exactly 1 expense added");
@@ -90,8 +79,7 @@ public class ExpenseServiceTest {
         assertTrue(e.participants().contains("bob") && e.participants().contains("charlie"),
             "Check participants in expense");
 
-        // 2) For each participant => addObligation(participant, payer, splitAmount)
-        double expectedSplit = 100.0 / 3.0; // 2 participants + 1 payer => 3 shares
+        double expectedSplit = 100.0 / 3.0;
         verify(obligationServiceMock).addObligation("bob", "alice", expectedSplit);
         verify(obligationServiceMock).addObligation("charlie", "alice", expectedSplit);
 

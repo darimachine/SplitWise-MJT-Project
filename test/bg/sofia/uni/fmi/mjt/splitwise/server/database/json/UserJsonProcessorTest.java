@@ -45,7 +45,6 @@ class UserJsonProcessorTest {
                  }
             }
             """;
-    private static final String INVALID_JSON = "{ invalid json ...";
 
     @BeforeEach
     void setUp() {

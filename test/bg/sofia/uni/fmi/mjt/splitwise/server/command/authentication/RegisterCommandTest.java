@@ -49,11 +49,10 @@ class RegisterCommandTest {
         verify(validatorMock).validate(VALID_ARGS, clientChannelMock);
 
         ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
-        //with verify and captor We are capturing the argument passed in addUser method which is the User!
+
         verify(userServiceMock).addUser(userCaptor.capture());
         User capturedUser = userCaptor.getValue();
 
-        // Ensure correct values
         assertEquals("testUser", capturedUser.getUsername(), "Username should match.");
         assertEquals("John", capturedUser.getFirstName(), "First name should match.");
         assertEquals("Doe", capturedUser.getLastName(), "Last name should match.");

@@ -41,7 +41,6 @@ class ExpenseJsonProcessorTest {
                ]
             }
             """;
-    private static final String INVALID_JSON = "{ invalid json ...";
 
     @BeforeEach
     void setUp() {
@@ -51,10 +50,8 @@ class ExpenseJsonProcessorTest {
     @Test
     void testLoadData_FileDoesNotExist_ReturnsDefaultData() throws IOException {
         try (MockedStatic<Files> filesMock = mockStatic(Files.class)) {
-            // Mock that the file "resources/expense.json" doesn't exist
             filesMock.when(() -> Files.exists(any(Path.class))).thenReturn(false);
 
-            // loadData() should now see "file missing" and return default data
             Map<String, List<Expense>> result = processor.loadData();
             assertNotNull(result, "Returned map should not be null.");
             assertTrue(result.isEmpty(), "Returned map should be empty when file is missing.");
@@ -66,12 +63,9 @@ class ExpenseJsonProcessorTest {
         try (MockedStatic<Files> filesMock = mockStatic(Files.class)) {
             filesMock.when(() -> Files.exists(any(Path.class))).thenReturn(true);
 
-            // Provide a valid JSON via a Reader
             Reader validJsonReader = new StringReader(VALID_JSON);
-            // We need a BufferedReader for newBufferedReader(...) to match the real method signature
             BufferedReader bufferedReader = new BufferedReader(validJsonReader);
 
-            // Mock newBufferedReader to return our bufferedReader
             filesMock.when(() -> Files.newBufferedReader(any(Path.class))).thenReturn(bufferedReader);
 
             Map<String, List<Expense>> loaded = processor.loadData();

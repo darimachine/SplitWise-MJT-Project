@@ -59,7 +59,6 @@ public class CommandValidatorFactory {
         private static CommandValidatorFactory instance;
     }
 
-    // **Singleton Constructor**
     private CommandValidatorFactory(AuthenticationManager authManager, ServiceValidatorFactory validatorFactory) {
 
         validators = new ConcurrentHashMap<>();

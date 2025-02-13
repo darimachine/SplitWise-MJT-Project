@@ -64,7 +64,6 @@ class ExchangeRateFetcherTest {
 
     @Test
     void testFetchRates_Non200ResponseCode_ThrowsException() throws Exception {
-        // Mock non-200 response
         when(httpResponseMock.statusCode()).thenReturn(400);
         when(httpClientMock.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class))).thenReturn(
             httpResponseMock);

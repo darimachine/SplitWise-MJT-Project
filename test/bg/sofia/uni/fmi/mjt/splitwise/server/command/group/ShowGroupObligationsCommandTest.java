@@ -77,7 +77,7 @@ class ShowGroupObligationsCommandTest {
 
     @Test
     void testExecute_UserHasNoGroups_ReturnsEmptySummary() {
-        when(userMock.getGroups()).thenReturn(Set.of()); // User has no groups
+        when(userMock.getGroups()).thenReturn(Set.of());
         when(obligationServiceMock.getMyGroupObligations(USERNAME, Map.of())).thenReturn("No group obligations.");
 
         String result = command.execute(VALID_ARGS, clientChannelMock);

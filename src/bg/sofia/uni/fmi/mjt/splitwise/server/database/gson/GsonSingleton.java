@@ -12,7 +12,7 @@ public class GsonSingleton {
     private static class GsonHolder {
         private static final Gson INSTANCE = new GsonBuilder()
             .setPrettyPrinting()
-            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()) // Register adapter
+            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter())
             .create();
     }
 

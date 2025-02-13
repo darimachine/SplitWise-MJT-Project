@@ -50,7 +50,7 @@ public class HelpCommand implements Command {
             .append(System.lineSeparator())
             .append("-- payed <username> <amount> - marks a debt as payed")
             .append(System.lineSeparator())
-            .append("-- all-notifications - lists all notifications of the current user") // tuka sme
+            .append("-- all-notifications - lists all notifications of the current user")
             .append(System.lineSeparator())
             .append("-- notifications - lists only the unread notifications of the current user")
             .append(System.lineSeparator())

@@ -25,7 +25,7 @@ public class SplitWiseClient {
             System.out.println(PLEASE_LOGIN_OR_REGISTER_MESSAGE);
             while (true) {
                 System.out.print("Enter message: ");
-                String message = scanner.nextLine(); // read a line from the console
+                String message = scanner.nextLine();
 
                 if ("disconnect".equals(message)) {
                     break;

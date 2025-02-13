@@ -29,7 +29,6 @@ public class SplitWithFriendCommand implements Command {
         this.validator = validator;
     }
 
-    //rest api currency
     @Override
     public String execute(String[] arguments, SocketChannel clientChannel) {
         validator.validate(arguments, clientChannel);

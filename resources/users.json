@@ -1,42 +1,42 @@
 {
-  "serho": {
-    "username": "serho",
-    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
-    "firstName": "Serho",
-    "lastName": "Ch",
-    "friends": [
-      "serhi"
-    ],
-    "groups": [
-      "Room"
-    ],
-    "preferredCurrency": "BGN"
-  },
   "serhi": {
     "username": "serhi",
-    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
-    "firstName": "Serhi",
-    "lastName": "Ch",
+    "password": "f8779Q4bZ+DEl1BOp1GLjZlMKfRl0k4HsGbdHbcnPJU\u003d",
+    "firstName": "Serhan",
+    "lastName": "Chavdarliev",
     "friends": [
-      "serho",
-      "serhq"
+      "ivan"
     ],
     "groups": [
-      "Room"
+      "RoomMate"
     ],
     "preferredCurrency": "BGN"
   },
-  "serhq": {
-    "username": "serhq",
-    "password": "o7HJvZKRtn8/q+zK8/lfR1p3kFY6msmx8ZHbvGScRg0\u003d",
-    "firstName": "Serhq",
-    "lastName": "Ch",
+  "georgi": {
+    "username": "georgi",
+    "password": "f8779Q4bZ+DEl1BOp1GLjZlMKfRl0k4HsGbdHbcnPJU\u003d",
+    "firstName": "Georgi",
+    "lastName": "Ivanov",
     "friends": [
-      "serhi"
+      "ivan"
     ],
     "groups": [
-      "Room"
+      "RoomMate"
     ],
-    "preferredCurrency": "EUR"
+    "preferredCurrency": "BGN"
+  },
+  "ivan": {
+    "username": "ivan",
+    "password": "f8779Q4bZ+DEl1BOp1GLjZlMKfRl0k4HsGbdHbcnPJU\u003d",
+    "firstName": "Ivan",
+    "lastName": "Ivanov",
+    "friends": [
+      "serhi",
+      "georgi"
+    ],
+    "groups": [
+      "RoomMate"
+    ],
+    "preferredCurrency": "BGN"
   }
 }

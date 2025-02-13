@@ -46,7 +46,7 @@ public class GroupService implements GroupServiceAPI {
     @Override
     public void addUserToGroup(String groupName, String username) {
         Set<String> memberSet = groups.get(groupName);
-        memberSet.add(username); // modifies in-memory set
+        memberSet.add(username);
         processor.saveData(groups);
     }
 

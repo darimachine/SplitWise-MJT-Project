@@ -41,9 +41,6 @@ public class FriendshipServiceTest {
 
         friendshipService.addFriend("alice", "bob");
 
-        // Assert
-        // Now, "alice" => friends: {"john","bob"}
-        //        "bob"   => friends: {"john","mary","alice"}
         assertTrue(alice.getFriends().contains("bob"), "Alice should now have bob as a friend");
         assertTrue(bob.getFriends().contains("alice"), "Bob should now have alice as a friend");
 
@@ -63,8 +60,6 @@ public class FriendshipServiceTest {
 
         friendshipService.removeFriend("alex", "peter");
 
-        // "alex" => friends: {"john"}   (peter removed)
-        // "peter" => friends: {}        (alex removed)
         assertFalse(alex.getFriends().contains("peter"), "alex no longer has peter as friend");
         assertFalse(peter.getFriends().contains("alex"), "peter no longer has alex as friend");
 

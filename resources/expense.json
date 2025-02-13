@@ -2,42 +2,33 @@
   "serhi": [
     {
       "payerUsername": "serhi",
-      "description": "Obshti smetki",
-      "amount": 200.0,
-      "participants": [
-        "serho"
-      ],
-      "dateTime": "2025-02-11 02:28:43"
-    },
-    {
-      "payerUsername": "serhi",
-      "description": "Plashtane na Obshtak",
-      "amount": 300.0,
-      "participants": [
-        "serho",
-        "serhq"
-      ],
-      "dateTime": "2025-02-11 02:29:55"
-    }
-  ],
-  "serhq": [
-    {
-      "payerUsername": "serhq",
-      "description": "Nqkakuv zaem",
-      "amount": 100.0,
-      "participants": [
-        "serhi"
-      ],
-      "dateTime": "2025-02-11 02:31:45"
-    },
-    {
-      "payerUsername": "serhq",
-      "description": "restorant",
+      "description": "Proba Euro",
       "amount": 50.0,
       "participants": [
+        "ivan"
+      ],
+      "dateTime": "2025-02-13 13:22:08"
+    }
+  ],
+  "ivan": [
+    {
+      "payerUsername": "ivan",
+      "description": "Vzeh Hladilnik",
+      "amount": 200.0,
+      "participants": [
         "serhi"
       ],
-      "dateTime": "2025-02-11 02:32:37"
+      "dateTime": "2025-02-13 13:19:26"
+    },
+    {
+      "payerUsername": "ivan",
+      "description": "Restorant",
+      "amount": 300.0,
+      "participants": [
+        "serhi",
+        "georgi"
+      ],
+      "dateTime": "2025-02-13 13:27:34"
     }
   ]
 }

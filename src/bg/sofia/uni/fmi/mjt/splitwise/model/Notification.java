@@ -14,7 +14,6 @@ public class Notification {
         this(message, LocalDateTime.now(), false);
     }
 
-    // full constructor if needed
     public Notification(String message, LocalDateTime timestamp, boolean seen) {
 
         if (message == null || message.isBlank()) {
