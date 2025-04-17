@@ -1,156 +1,148 @@
 # Split(NotSo)Wise :money_with_wings:
 
-Напишете клиент-сървър приложение с функционалност, наподобяваща тази на [Splitwise](https://www.splitwise.com/).
+Create a client-server application with functionality similar to [Splitwise](https://www.splitwise.com/).
 
-Splitwise цели улесняване на поделянето на сметки между приятели и съквартиранти и намаляване на споровете от тип "само аз купувам бира в това общежитие".
+Splitwise aims to simplify bill splitting between friends and roommates and reduce arguments like "I'm the only one buying beer in this dorm."
 
-## Условие
+## Task
 
-Създайте клиентско конзолно приложение, което приема потребителски команди, изпраща ги за обработка на сървъра, приема отговора му и го предоставя на потребителя в четим формат.
+Create a console-based client application that accepts user commands, sends them to the server for processing, receives the response, and displays it to the user in a readable format.
 
-*Note*: Командите и output-a в условието са примерни, свободни сте да ги преименувате и форматирате. Единственото условие е те да бъдат интуитивни. За улеснение на потребителя, може да имплементирате команда help.
+*Note*: The commands and outputs shown here are just examples. You are free to rename and reformat them. The only requirement is that they should be intuitive. For user convenience, you may implement a `help` command.
 
-### Функционални изисквания
+### Functional Requirements
 
-- Регистрация на потребител с username и password; Регистрираните потребители се пазят във файл при сървъра - той служи като база от данни. При спиране и повторно пускане, сървърът може да зареди в паметта си вече регистрираните потребители.
+- User registration with username and password; Registered users are stored in a file on the server, which serves as a database. When the server is restarted, it can load the registered users into memory.
 
 - Login;
-- Регистриран потребител може да:
-    - добавя вече регистрирани потребители във Friend List на база техния username. Например:
+- A registered user can:
+    - Add already registered users to their Friend List using their usernames. For example:
         ```bash
         $ add-friend <username>
         ```
-    - създава група, състояща се от няколко, вече регистрирани, потребители:
-
+    - Create a group consisting of several already registered users:
         ```bash
         $ create-group <group_name> <username> <username> ... <username>
         ```
-        Групите се създават от един потребител, като всяка група включва трима или повече потребители. Можете да си представяте, че "приятелските" отношения са група от двама човека.
+        Groups are created by a user and include three or more users. You can think of “friend” relationships as a group of two people.
 
-    - добавя сума, платена от него, в задълженията на:
-        - друг потребител от friend list-a му:
+    - Add an amount paid by them to the obligations of:
+        - Another user from their friend list:
         ```bash
         $ split <amount> <username> <reason_for_payment>
         ```
-        - група, в която участва:
-
+        - A group they are part of:
         ```bash
         $ split-group <amount> <group_name> <reason_for_payment>
         ```
 
-    - получава своя статус - сумите, които той дължи на приятелите си и в групите си и сумите, които дължат на него. Например:
+    - Get their status – amounts they owe to friends and groups, and amounts owed to them. For example:
         ```bash
         $ get-status
         Friends:
-        * Pavel Petrov (pavel97): Owes you 10 LV
+        * Pavel Petrov (pavel97): Owes you 10 BGN
 
         Groups
         * 8thDecember
-        - Pavel Petrov (pavel97): Owes you 25 LV
-        - Hristo Hristov (ico_h): Owes you 25 LV
-        - Harry Gerogiev (harryharry): You owe 5 LV
+        - Pavel Petrov (pavel97): Owes you 25 BGN
+        - Hristo Hristov (ico_h): Owes you 25 BGN
+        - Harry Georgiev (harryharry): You owe 5 BGN
         ```
-        Може да визуализирате всички групи и приятели или само тези, при които има "неуредени сметки".
+        You may display all groups and friends or only those with unsettled debts.
 
+- A newly added amount is split equally among all members of a group or split in half when shared with a friend.
 
-- Нововъведена сума се дели поравно между всички участници в групата или наполовина, ако се дели с потребител от Friend List-a.
-
-- Когато един потребител А дължи пари на друг потребител B, задължението може да бъде "погасено" (с подходяща команда) само от потребител B.
+- When user A owes user B money, the debt can only be "cleared" (with an appropriate command) by user B:
     ```bash
     $ payed <amount> <username>
     ```
-    Например:
+    Example:
     ```bash
     $ get-status
     Friends:
-    * Pavel Petrov (pavel97): Owes you 10 LV
-    * Hristo Hristov (ico_h): You owe 5 LV
+    * Pavel Petrov (pavel97): Owes you 10 BGN
+    * Hristo Hristov (ico_h): You owe 5 BGN
 
     $ payed 5 pavel97
-    Pavel Petrov (pavel97) payed you 5 LV.
-    Current status: Owes you 5 LV
+    Pavel Petrov (pavel97) payed you 5 BGN.
+    Current status: Owes you 5 BGN
 
     $ get-status
     Friends:
-    * Pavel Petrov (pavel97): Owes you 5 LV
-    * Hristo Hristov (ico_h): You owe 5 LV
+    * Pavel Petrov (pavel97): Owes you 5 BGN
+    * Hristo Hristov (ico_h): You owe 5 BGN
     ```
 
-- Когато един потребител А дължи на потребител B сума (например 5$), но преди да ги върне на B добави друга сума, която той е платил (например 5$), тогава дължимите суми и на двамата се преизчисляват (дължимата сума на А ще стане 2.50$, B все още не дължи нищо, но има да взима 2.50$).
+- When user A owes user B money (e.g., 5 BGN) but before repaying adds another amount they paid (e.g., 5 BGN), the debts are recalculated (A now owes 2.50 BGN, B is owed 2.50 BGN).
     ```bash
     $ get-status
     Friends:
-    * Pavel Petrov (pavel97): Owes you 10 LV
-    * Hristo Hristov (ico_h): You owe 5 LV
+    * Pavel Petrov (pavel97): Owes you 10 BGN
+    * Hristo Hristov (ico_h): You owe 5 BGN
 
     $ split 5 ico_h limes and oranges
-    Splitted 5 LV between you and Hristo Hristov.
-    Current status: You owe 2.50 LV
+    Splitted 5 BGN between you and Hristo Hristov.
+    Current status: You owe 2.50 BGN
 
     $ get-status
     Friends:
-    * Pavel Petrov (pavel97): Owes you 5 LV
-    * Hristo Hristov (ico_h): You owe 2.50 LV
+    * Pavel Petrov (pavel97): Owes you 5 BGN
+    * Hristo Hristov (ico_h): You owe 2.50 BGN
     ```
 
-- При всяко влизане на потребителя в системата, той получава известия, ако негови приятели са добавяли суми или "погасявали" дългове.
-Например:
+- Each time a user logs into the system, they receive notifications if friends have added amounts or cleared debts.
+For example:
     ```bash
     $ login alex alexslongpassword
     Successful login!
     No notifications to show.
     ```
-    или
+    or
     ```bash
     $ login alex alexslongpassword
     Successful login!
     *** Notifications ***
     Friends:
-    Misho approved your payment 10 LV [Mixtape beers].
+    Misho approved your payment 10 BGN [Mixtape beers].
 
     Groups:
     * Roomates:
-    You owe Gery 20 LV [Tanya Bday Present].
+    You owe Gery 20 BGN [Tanya Bday Present].
 
     * Family:
-    You owe Alex 150 LV [Surprise trip for mom and dad]
+    You owe Alex 150 BGN [Surprise trip for mom and dad]
     ```
-- Потребителят може да види история на плащанията, извършени от него. Тази история се пази във файл на сървъра.
 
-- (***Бонус***) Сървърът предоставя възможност за currency conversion. Валутата по подразбиране е български лева, като потребителят може да я смени по всяко време на изпълнение на програмата, чрез подходяща команда (например `switch-currency EUR`). Всички суми, които потребителят дължи и дължат на него към този момент, преминават в избраната валута.
+- The user can view a history of their payments. This history is saved in a file on the server.
 
-    Чрез HTTP заявка до някое публично API (например https://exchangeratesapi.io/) вземете текущите стойности на валутите и обработете response-a.
+- (***Extra Task***) The server provides currency conversion functionality. The default currency is Bulgarian lev (BGN), but the user can switch it at any time using an appropriate command (e.g., `switch-currency EUR`). All debts are then converted to the selected currency.
 
-### Нефункционални изисквания
+    Use an HTTP request to a public API (e.g., https://exchangeratesapi.io/) to get the current exchange rates and process the response.
 
-- Сървърът може да обслужва множество потребители паралелно.
+### Non-functional Requirements
 
-## Съобщения за грешки
+- The server must support multiple users concurrently.
 
-При неправилно използване на програмата, на потребителя да се извеждат подходящи съобщения за грешка.
+## Error Messages
 
-При възникване програмна грешка, на потребителя да се извежда само уместна за него информация. Техническа информация за самата грешка и stackTraces да се записват във файл на файловата система - няма определен формат за записване на грешката.
+If the program is misused, appropriate error messages must be shown to the user.
 
-Например, нерелевантно е при логин на потребител и възникнал проблем с мрежовата комуникация, да се изписва грешка от вида на "IO exception occurred: connection reset", по-подходящо би било "Unable to connect to the server. Try again later or contact administrator by providing the logs in <path_to_logs_file>".
+In case of a program error, the user should only see a relevant message. Technical error information and stack traces should be logged to a file – no specific format is required.
 
-При възникване на програмна грешка от страна на сървъра, подходящо съобщение се изписва на конзолата и във файл, като освен това, във файла се записва допълнителна информация (например при заявка на кой потребител е възникнала грешката, ако въобще е обвързана с потребителско взаимодействие) и stacktraces.
+For example, instead of displaying "IO exception occurred: connection reset" during a login failure due to a network issue, it would be better to show "Unable to connect to the server. Try again later or contact the administrator by providing the logs in <path_to_logs_file>".
 
-## Уточнения
+When a server-side error occurs, a suitable message is shown in the console and logged, along with additional info such as which user triggered the error (if applicable) and the full stack trace.
 
-- Както може би се досещате, това не е система за банкови транзакции и плащането на съответните суми не ни интересува как се случва.
+## Clarifications
 
-    Нека си представим, че Ана и Ива са съквартирантки. Ана плаща общежитията и на двете и записва това в приложението. После Ива ѝ дава парите, които дължи, а Ана влиза в приложението и записва, че Ива ѝ се е издължила. Ива не може сама да каже "Аз платих моята част".
+- As you may guess, this is not a banking system, and we are not concerned with how the payments themselves happen.
 
-- Валидацията на потребителския вход е задължителна, т.е. покрийте всички сценарии, за които се сетите с невалиден вход - било то null, грешно форматиране, невалиден тип на данните и т.н.
+    Imagine Anna and Eva are roommates. Anna pays the rent for both and records it in the app. Then Eva gives Anna the money, and Anna records that Eva repaid her. Eva cannot record it herself.
 
-- Командите и output-a от тях са примерни. Ако не ви допадат или не ги разбирате, сте свободни да използвате други. Единствената им цел тук е да помогнат за разбирането на условието.
+- User input validation is mandatory – handle all scenarios you can think of, like null, wrong formatting, invalid data types, etc.
 
-- Всякакви допълнителни функционалности, за които се сетите, са добре дошли.
+- The example commands and outputs are for guidance only. You are free to use other commands if they make more sense to you.
 
-## Submission
+- Any additional functionalities you think of are welcome.
 
-Качете в грейдъра `.zip` архив на познатите директории `src` и `test`. Ако пакетирате допълнителни файлове (които не са .java), те трябва да са в корена на архива, на нивото на `src` и `test`.
-В грейдъра няма да има автоматизирани референтни тестове.
-Проектът ви трябва да е качен в грейдъра не по-късно от 18:00 в деня преди датата на защитата.
 
-Успех!
